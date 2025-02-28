@@ -1,0 +1,145 @@
+:root {
+    --mobile-width: 40%;
+    --margin-bot-bestRestaurants: 2.5rem;
+}
+
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    h1 {
+        margin: 0;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    p {
+        line-height: 2rem;
+    }
+    h1, h2 {
+        font-family: 'Amatic SC', sans-serif;
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            display: inline;
+        }
+    }
+    header {
+        
+            background-image:   linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+                                url("../images/lyon.webp");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 1rem;
+            a {
+                color: white;
+            }
+            h1, ul, p {
+                margin: auto;
+                width: var(--mobile-width);
+                padding: 0.4rem 0;
+            }
+    }
+    main {
+        section#cuisineFromLyon {
+            @media (width >= 768px) {
+                display: flex;
+                text-align: left;
+            }
+            img {
+                width: 30%;
+                margin: 2rem 0 0;
+            }
+            div {
+                p, h2 {
+                    margin: 1.5rem 2.5rem 2rem;
+                }
+                h2 {
+                    margin-top: 3rem;
+                }
+            }
+        }
+        section#famousDishes {
+            div {
+                @media (width >= 768px) {
+                display: flex;
+            }
+                article {
+                     border: 2px solid lightgrey;
+                     margin: 1.5rem 4rem;
+                     box-shadow: 0 2px 5px lightgrey;
+                     @media (width >= 768px) {
+                         width: 30%;
+                         margin: 1.5rem 2rem;
+                     }
+                     img {
+                         width: 15em;
+                         height: 15em;
+                         object-fit: cover
+                     }
+                     p {
+                         margin: 1.5rem;
+                     }
+                }
+            }
+        }
+        section#bestRestaurants {
+            margin: 3rem 1rem;
+            h2 {
+                margin-bottom:  var(--margin-bot-bestRestaurants);
+            }
+            div {
+                @media (width >= 768px) {
+                    display: flex;
+                }
+                article {
+                    margin: 0 2rem var(--margin-bot-bestRestaurants);
+                    img {
+                        width: 50%;
+                        height: 20rem;
+                        object-fit: cover;
+                    }
+                    h3 {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        background-color: #333333;
+        color: white;
+        font-size: 0.8rem;
+        padding: 1rem 0;
+        nav {
+            display: flex;
+            text-align: left;
+            justify-content: space-around;
+            h2 {
+                font-family: 'Work Sans', sans-serif;
+                font-size: 1.2rem;
+            }
+            h2, p{
+                margin-left: 1rem;
+            }
+        }
+        div {
+            background-color: #222222;
+            p{
+                margin: 0;
+                padding: 0.8rem;
+            }
+        }
+
+    }
+    
+}
